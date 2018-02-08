@@ -1,1 +1,1 @@
-include ':app-direction', ':app-location', ':app-maptoolbar'
+include ':app-direction', ':app-location', ':app-maptoolbar', ':app-streetview'

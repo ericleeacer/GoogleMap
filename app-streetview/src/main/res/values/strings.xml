@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">app-streetview</string>
+    <string name="title_activity_street_view">Map StreetView</string>
+</resources>
