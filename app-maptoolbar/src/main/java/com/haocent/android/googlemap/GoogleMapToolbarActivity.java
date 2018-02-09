@@ -10,6 +10,12 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+/**
+ * Google Map 地图工具栏
+ *
+ * Created by Tnno Wu on 2018/02/08.
+ */
+
 public class GoogleMapToolbarActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
