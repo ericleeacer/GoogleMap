@@ -9,7 +9,7 @@ import com.google.android.gms.maps.SupportStreetViewPanoramaFragment;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
- * 街景
+ * 街景（基础）
  *
  * Created by Tnno Wu on 2018/02/08.
  */
