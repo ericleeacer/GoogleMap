@@ -24,6 +24,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
+ * 自定义定位
+ *
  * Created by Tnno Wu on 2018/02/08.
  */
 

@@ -8,6 +8,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 
+/**
+ * Google Map 定位
+ *
+ * Created by Tnno Wu on 2018/02/08.
+ */
+
 public class GoogleMapLocationActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
