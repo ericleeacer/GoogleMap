@@ -16,6 +16,7 @@ import com.google.android.gms.maps.model.LatLng;
 
 public class StreetViewActivity extends AppCompatActivity {
 
+    // 经测试：如果你输入的是中国大陆的某个经纬度，功能将受限或者地图打不开
     private static final LatLng STATUE_OF_LIBERTY = new LatLng(40.689611718944896, -74.04564142227173);
 
     @Override
