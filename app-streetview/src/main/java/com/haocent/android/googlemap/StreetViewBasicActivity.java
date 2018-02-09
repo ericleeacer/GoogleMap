@@ -8,6 +8,12 @@ import com.google.android.gms.maps.StreetViewPanorama;
 import com.google.android.gms.maps.SupportStreetViewPanoramaFragment;
 import com.google.android.gms.maps.model.LatLng;
 
+/**
+ * 街景（基础）
+ *
+ * Created by Tnno Wu on 2018/02/08.
+ */
+
 public class StreetViewBasicActivity extends AppCompatActivity {
 
     private static final LatLng DALIAN = new LatLng(38.9135883, 121.6148269);
