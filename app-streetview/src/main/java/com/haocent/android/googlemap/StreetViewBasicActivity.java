@@ -8,14 +8,14 @@ import com.google.android.gms.maps.StreetViewPanorama;
 import com.google.android.gms.maps.SupportStreetViewPanoramaFragment;
 import com.google.android.gms.maps.model.LatLng;
 
-public class StreetViewActivity extends AppCompatActivity {
+public class StreetViewBasicActivity extends AppCompatActivity {
 
     private static final LatLng DALIAN = new LatLng(38.9135883, 121.6148269);
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_street_view);
+        setContentView(R.layout.activity_street_view_basic);
 
         SupportStreetViewPanoramaFragment streetViewPanoramaFragment =
                 (SupportStreetViewPanoramaFragment)
