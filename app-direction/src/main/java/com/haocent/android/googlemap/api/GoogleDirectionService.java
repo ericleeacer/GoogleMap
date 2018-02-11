@@ -22,4 +22,16 @@ public interface GoogleDirectionService {
                                                        @Query("mode") String mode,
                                                        @Query("language") String language,
                                                        @Query("sensor") boolean sensor);
+
+    /**
+     * 顺次停靠
+     *
+     * https://maps.googleapis.com/maps/api/directions/json?origin=Dalian&destination=Shenyang&waypoints=Yingkou|Benxi&key=AIzaSyCsSXwWlWn0JrjVtKAv1DWmrkTkI3sgrYs&mode=driving&language=zh-cn&sensor=true
+     */
+
+    /**
+     * 途经，并且不做停靠
+     *
+     * https://maps.googleapis.com/maps/api/directions/json?origin=Dalian&destination=Shenyang&waypoints=via:Yingkou|via:Benxi&key=AIzaSyCsSXwWlWn0JrjVtKAv1DWmrkTkI3sgrYs&mode=driving&language=zh-cn&sensor=true
+     */
 }
