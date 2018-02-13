@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="© 2016 - 2017  Haocent Technology" />
+        android:text="© 2017 - 2018  Haocent Technology" />
 
     <ProgressBar
         android:id="@+id/progress"
