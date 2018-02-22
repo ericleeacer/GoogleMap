@@ -113,8 +113,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mEtStart = findViewById(R.id.edit_start);
         mEtEnd = findViewById(R.id.edit_end);
 
-        Button mBtnDirection = findViewById(R.id.btn_direction);
-        mBtnDirection.setOnClickListener(new View.OnClickListener() {
+        Button btnDirection = findViewById(R.id.btn_direction);
+        btnDirection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showProgress();
