@@ -126,10 +126,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mTvDistance = findViewById(R.id.tv_total_distance);
         mTvDuration = findViewById(R.id.tv_total_duration);
 
-        RecyclerView mRecyclerView = findViewById(R.id.rcv_map);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setHasFixedSize(false);
-        mRecyclerView.setAdapter(mAdapter);
+        RecyclerView rcv = findViewById(R.id.rcv_map);
+        rcv.setLayoutManager(new LinearLayoutManager(this));
+        rcv.setHasFixedSize(false);
+        rcv.setAdapter(mAdapter);
     }
 
     private void initMapData() {
