@@ -25,6 +25,8 @@ import com.google.android.gms.maps.model.CameraPosition;
 /**
  * 国内国外地图切换
  *
+ * 参考高德地图官方文档：http://lbs.amap.com/dev/demo/switch-map/#Android
+ *
  * Created by Tnno Wu on 2018/02/08.
  */
 
