@@ -57,9 +57,8 @@ public class MapsActivity extends FragmentActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        init();
+        initView();
 
-        mContainerLayout = findViewById(R.id.map_container);
         mAMapView = new TextureMapView(this);
         mParams = new LayoutParams(LayoutParams.MATCH_PARENT,
                 LayoutParams.MATCH_PARENT);
@@ -75,12 +74,11 @@ public class MapsActivity extends FragmentActivity implements
         anDisappear.setDuration(5000);
     }
 
-    private void init() {
+    private void initView() {
         mContainerLayout = findViewById(R.id.map_container);
         mMapBtn = findViewById(R.id.btn_switch);
         mMapBtn.setOnClickListener(this);
     }
-
 
     @Override
     public void onClick(View v) {
