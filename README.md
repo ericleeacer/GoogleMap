@@ -60,7 +60,7 @@ implementation 'com.amap.api:3dmap:6.0.0'
 
 * Retrofit: <a href='http://search.maven.org/#artifactdetails%7Ccom.squareup.retrofit2%7Cretrofit-mock%7C2.3.0%7C'><img src='https://img.shields.io/maven-central/v/com.squareup.retrofit2/retrofit.svg'></a>
 
-* AMap: <a href='http://search.maven.org/#artifactdetails%7Ccom.amap.api%7C3dmap%7C6.0.0%7Cjar><img src='https://img.shields.io/maven-central/v/com.amap.api/3dmap.svg'></a>
+* AMap: <a href='http://search.maven.org/#artifactdetails%7Ccom.amap.api%7C3dmap%7C6.0.0%7Cjar'><img src='https://img.shields.io/maven-central/v/com.amap.api/3dmap.svg'></a>
 
 Additional binaries and dependency information for can be found at [http://search.maven.org](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.reactivex.rxjava2%22%20a%3A%22rxandroid%22).
 
