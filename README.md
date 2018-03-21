@@ -1,4 +1,4 @@
-# Android Google Map developer guide
+# Android Google Map Developer Guide
 
 路线图：
 </br>https://github.com/cnwutianhao/GoogleMap/tree/master/app-direction
