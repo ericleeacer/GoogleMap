@@ -1,6 +1,7 @@
 package com.haocent.android.googlemap.ui;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -27,6 +28,9 @@ public class MapsAdapter extends RecyclerView.Adapter<MapsAdapter.MapsViewHolder
 
     private List<GoogleDirectionBean.RoutesBean.LegsBean.StepsBean> mList;
 
+    private static final int TYPE_HEADER = 0;
+    private static final int TYPE_NORMAL = 1;
+
     public MapsAdapter(Context context) {
         mContext = context;
     }
@@ -47,14 +51,34 @@ public class MapsAdapter extends RecyclerView.Adapter<MapsAdapter.MapsViewHolder
 
     @Override
     public void onBindViewHolder(MapsViewHolder holder, int position) {
-        holder.tvNum.setText(position + 1 + "");
+        if (getItemViewType(position) == TYPE_HEADER) {
+            holder.tvHeaderLine.setVisibility(View.INVISIBLE);
+            holder.tvDistance.setTextColor(Color.BLACK);
+            holder.tvDuration.setTextColor(Color.BLACK);
+            holder.tvInstructions.setTextColor(Color.BLACK);
+            holder.tvDot.setBackgroundResource(R.drawable.timeline_dot_header);
+        } else if (getItemViewType(position) == TYPE_NORMAL) {
+            holder.tvHeaderLine.setVisibility(View.VISIBLE);
+            holder.tvDistance.setTextColor(Color.GRAY);
+            holder.tvDuration.setTextColor(Color.GRAY);
+            holder.tvInstructions.setTextColor(Color.GRAY);
+            holder.tvDot.setBackgroundResource(R.drawable.timeline_dot_normal);
+        }
 
-        holder.tvDistance.setText("距离 " + mBean.getRoutes().get(0).getLegs().get(0).getSteps().get(position).getDistance().getText());
+        holder.tvDistance.setText("距离 " + mBean.getRoutes().get(0).getLegs().get(0).getSteps().get(position).getDistance().getText() + ", ");
 
         holder.tvDuration.setText("用时 " + mBean.getRoutes().get(0).getLegs().get(0).getSteps().get(position).getDuration().getText());
 
-        String travelMode = mBean.getRoutes().get(0).getLegs().get(0).getSteps().get(position).getTravel_mode() + " ";
-        holder.tvInstructions.setText(travelMode + " " + Html.fromHtml(mBean.getRoutes().get(0).getLegs().get(0).getSteps().get(position).getHtml_instructions(), imageGetter, null));
+        holder.tvInstructions.setText(Html.fromHtml(mBean.getRoutes().get(0).getLegs().get(0).getSteps().get(position).getHtml_instructions(), imageGetter, null));
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (position == 0) {
+            return TYPE_HEADER;
+        }
+
+        return TYPE_NORMAL;
     }
 
     @Override
@@ -64,14 +88,15 @@ public class MapsAdapter extends RecyclerView.Adapter<MapsAdapter.MapsViewHolder
 
     public class MapsViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tvNum, tvDistance, tvDuration, tvInstructions;
+        TextView tvDistance, tvDuration, tvInstructions, tvHeaderLine, tvDot;
 
         public MapsViewHolder(View itemView) {
             super(itemView);
-            tvNum = itemView.findViewById(R.id.tv_num);
             tvDistance = itemView.findViewById(R.id.tv_distance);
             tvDuration = itemView.findViewById(R.id.tv_duration);
             tvInstructions = itemView.findViewById(R.id.tv_instructions);
+            tvHeaderLine = itemView.findViewById(R.id.tv_header_line);
+            tvDot = itemView.findViewById(R.id.tv_dot);
         }
     }
 

@@ -1,62 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tv_num"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:background="@android:color/darker_gray"
-        android:padding="5dp"
-        android:text="1" />
+    <RelativeLayout
+        android:layout_width="32dp"
+        android:layout_height="match_parent">
 
-    <LinearLayout
+        <TextView
+            android:id="@+id/tv_header_line"
+            android:layout_width="0.5dp"
+            android:layout_height="12dp"
+            android:layout_centerHorizontal="true"
+            android:background="#888" />
+
+        <TextView
+            android:id="@+id/tv_dot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@id/tv_header_line"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/timeline_dot_normal" />
+
+        <TextView
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_dot"
+            android:layout_centerHorizontal="true"
+            android:background="#888" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/tv_num"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:paddingBottom="6dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp">
 
         <LinearLayout
+            android:id="@+id/ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_distance"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="距离 47 米" />
+                android:text="距离 47 米，" />
 
             <TextView
                 android:id="@+id/tv_duration"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:layout_weight="1"
                 android:text="用时 1分钟" />
 
         </LinearLayout>
 
         <TextView
             android:id="@+id/tv_instructions"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="DRIVING 向南方向，前往人民广场民政街" />
+            android:layout_below="@id/ll"
+            android:layout_marginTop="5dp"
+            android:textColor="#888"
+            android:textSize="14sp"
+            tools:text="步行前往大连" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@android:color/darker_gray" />
-
-</RelativeLayout>
+</LinearLayout>
